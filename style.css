@@ -1,0 +1,56 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(244, 189, 86);
+}
+.group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.group:hover .card:nth-child(1) {
+  transform: translateX(0px);
+  rotate: -15deg;
+}
+.group:hover .card:nth-child(3) {
+  transform: translateX(0px);
+  rotate: 15deg;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  background: #fbc3c3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px white solid;
+  transition: all 0.5s ease-in-out;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:nth-child(1) {
+  rotate: -10deg;
+  z-index: 3;
+  transform: translateX(40px);
+}
+.card:nth-child(2) {
+  transform: translateY(-45px);
+  z-index: 2;
+}
+.card:nth-child(3) {
+  rotate: 10deg;
+  transform: translateX(-40px);
+}
